@@ -19,3 +19,5 @@
    npm run dev
    
 4. Go to http://localhost:8080
+
+5. Build for production using the command `NODE_ENV=production webpack`. Use the file `src/app.js`.
