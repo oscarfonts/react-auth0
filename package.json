@@ -1,9 +1,10 @@
 {
   "name": "react-auth0",
   "version": "0.0.0",
-  "description": "Prueba integración react auth0",
+  "description": "React + Auth0 integration test",
   "main": "webpack.config.js",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "auth0-lock": "^10.5.1",
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.7",
@@ -12,16 +13,16 @@
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-0": "^6.16.0",
     "dotenv-webpack": "^1.3.1",
+    "gh-pages": "^0.11.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "webpack": "^1.13.3",
     "webpack-dev-server": "^1.16.2"
   },
-  "devDependencies": {},
   "scripts": {
     "dev": "webpack-dev-server --content-base src --inline --hot",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "echo \"TODO\""
+    "deploy": "NODE_ENV=production webpack && gh-pages -d src -s '*'"
   },
   "author": "Oscar Fonts <oscar.fonts@geomati.co>",
   "license": "MIT"
